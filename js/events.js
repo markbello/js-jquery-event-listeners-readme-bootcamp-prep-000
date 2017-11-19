@@ -12,15 +12,16 @@ function frameIt(){
 }
 
 function pressIt(){
-  $('form').on('keydown', function(key){
-    if(key.which === '71' || key.which === '103'){
+  $('form').on('keydown', function(){
+    if($('input.first').val() === '71' || $('input.first').val() === '103'){
       alert('You pressed g');
+      return;
     }
   });
 }
 
 function submitIt(){
-  $('input').on('submit', function(){
+  $('form').on('submit', function(){
     alert('Your form is going to be submitted now.');
   });
 }
